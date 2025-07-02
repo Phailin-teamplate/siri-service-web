@@ -30,7 +30,7 @@ export default function About() {
       </motion.div>
 
       {/* Content */}
-      <motion.div className="max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row items-start justify-between py-5 gap-10 md:gap-16"  initial={{ opacity: 0, y: 20 }} // 👈 slide from bottom
+      <motion.div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-start justify-between py-5 gap-10 md:gap-16"  initial={{ opacity: 0, y: 20 }} // 👈 slide from bottom
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.4 }}>

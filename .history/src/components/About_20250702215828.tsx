@@ -18,19 +18,19 @@ export default function About() {
     >
       {/* Section Title */}
       <motion.div
-        className="text-center md:mb-10 mb-5"
+        className="text-center md:mb-10"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#D3B156]">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#D3B156]">
           About Us
         </h2>
       </motion.div>
 
       {/* Content */}
-      <motion.div className="max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row items-start justify-between py-5 gap-10 md:gap-16"  initial={{ opacity: 0, y: 20 }} // 👈 slide from bottom
+      <motion.div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-start justify-between py-5 gap-10 md:gap-16"  initial={{ opacity: 0, y: 20 }} // 👈 slide from bottom
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.4 }}>

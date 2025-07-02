@@ -21,7 +21,7 @@ export default function Homepage() {
           {/* Centered Content */}
           <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
             <div className="mb-4 sm:mb-4">
-              <p className="text-white text-base xs:text-base sm:text-xl md:text-3xl font-medium">
+              <p className="text-white text-sm xs:text-base sm:text-xl md:text-3xl font-medium">
                 Total Business Support Service in Laos 
               </p>
             </div>

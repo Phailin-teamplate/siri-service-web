@@ -77,7 +77,7 @@ const services = [
 
 export default function Service() {
   return (
-<section id="service" className="md:scroll-mt-10 scroll-mt-15">
+<section id="service" className="md:scroll-mt-10 scroll-mt-14">
       <div className="w-full bg-white px-4 sm:px-6 lg:px-12 xl:px-20 2xl:px-32 py-5 sm:py-5 lg:py-15">
          {/* Section Title */}
       <motion.div
@@ -87,7 +87,7 @@ export default function Service() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#D3B156]">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#D3B156]">
           Our Services
         </h2>
       </motion.div>

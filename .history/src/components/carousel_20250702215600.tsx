@@ -34,7 +34,7 @@ export default function PortfolioCarousel() {
 
   return (
     <div
-      className="w-full max-w-screen-xl mx-auto px-4 md:px-8 py-10 sm:py-10 lg:py-15 md:scroll-mt-15 scroll-mt-10"
+      className="w-full max-w-screen-xl mx-auto px-4 md:px-8 py-10 sm:py-10 lg:py-15 md:scroll-mt-24 scroll-mt-15"
       id="portfolio"
     >
       {/* Section Title */}
@@ -45,7 +45,7 @@ export default function PortfolioCarousel() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#D3B156]">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#D3B156]">
           Our Portfolio
         </h2>
       </motion.div>
