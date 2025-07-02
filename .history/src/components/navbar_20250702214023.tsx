@@ -133,7 +133,7 @@ export default function Navbar() {
               className={`text-left text-lg font-bold px-3 py-2 rounded-md transition-all duration-300 ${
                 activeSection === id
                   ? "bg-[#D3B156] text-white shadow-md"
-                  : "text-gray-800 hover:bg-yellow-100 hover:text-[#D3B156]"
+                  : "text-gray-800 hover:bg-yellow-100 hover:text-[#D3B156]
               }`}
             >
               {["About", "Services", "Customers", "Portfolio"][i]}

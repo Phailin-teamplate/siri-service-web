@@ -10,7 +10,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ForumImage from "@/public/About.png";
 import AnotherImage from "@/public/service/service1.png";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const items = [
   {

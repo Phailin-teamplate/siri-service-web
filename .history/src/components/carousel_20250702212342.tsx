@@ -10,7 +10,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ForumImage from "@/public/About.png";
 import AnotherImage from "@/public/service/service1.png";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const items = [
   {
@@ -34,7 +34,7 @@ export default function PortfolioCarousel() {
 
   return (
     <div
-      className="w-full max-w-screen-xl mx-auto px-4 md:px-8 py-10 sm:py-10 lg:py-15 scroll-mt-24"
+      className="w-full max-w-screen-xl mx-auto px-4 md:px-8 py-5 sm:py-5 lg:py-15 scroll-mt-24"
       id="portfolio"
     >
       {/* Section Title */}

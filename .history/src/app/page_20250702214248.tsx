@@ -12,7 +12,7 @@ export const metadata = {
     "Learn about SIRI SERVICE — our story, mission, team, and values that drive our innovation.",
   keywords: ["SIRI SERVICE", "about", "our story", "mission", "values", "team"],
   openGraph: {
-    title: "Homepage | SIRI SERVICE",
+    title: "About | SIRI SERVICE",
     description:
       "Discover SIRI SERVICE's story, mission, and the people behind our success.",
     url: "https://yourdomain.com/about",

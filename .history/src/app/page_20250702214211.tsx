@@ -9,20 +9,20 @@ import ClientLayout from "../components/ClientLayout";
 export const metadata = {
   title: "Homepage | SIRI SERVICE",
   description:
-    "Learn about SIRI SERVICE — our story, mission, team, and values that drive our innovation.",
-  keywords: ["SIRI SERVICE", "about", "our story", "mission", "values", "team"],
+    "Learn about TEAMPLATE — our story, mission, team, and values that drive our innovation.",
+  keywords: ["teamplate", "about", "our story", "mission", "values", "team"],
   openGraph: {
-    title: "Homepage | SIRI SERVICE",
+    title: "About | TEAMPLATE",
     description:
-      "Discover SIRI SERVICE's story, mission, and the people behind our success.",
+      "Discover TEAMPLATE's story, mission, and the people behind our success.",
     url: "https://yourdomain.com/about",
-    siteName: "SIRI SERVICE",
+    siteName: "TEAMPLATE",
     images: [
       {
         url: "https://yourdomain.com/images/about-og.jpg", // ✅ Replace with actual path
         width: 1200,
         height: 630,
-        alt: "About SIRI SERVICE",
+        alt: "About TEAMPLATE",
       },
     ],
     locale: "en_US",

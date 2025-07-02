@@ -81,7 +81,7 @@ export default function Navbar() {
               className={`relative text-base font-bold px-3 py-2 rounded-lg transition-all duration-300 ${
                 activeSection === id
                   ? "bg-[#D3B156] text-white shadow-md"
-                  : "text-gray-800 hover:bg-yellow-100 hover:[#D3B156]"
+                  : "text-gray-800 hover:bg-blue-100 hover:[#D3B156]"
               }`}
             >
               {["About", "Services", "Customers", "Portfolio"][i]}
@@ -132,8 +132,8 @@ export default function Navbar() {
               onClick={() => handleSmoothScroll(id)}
               className={`text-left text-lg font-bold px-3 py-2 rounded-md transition-all duration-300 ${
                 activeSection === id
-                  ? "bg-[#D3B156] text-white shadow-md"
-                  : "text-gray-800 hover:bg-yellow-100 hover:text-[#D3B156]"
+                  ? "bg-blue-600 text-white shadow-md"
+                  : "text-gray-800 hover:bg-blue-100 hover:text-blue-600"
               }`}
             >
               {["About", "Services", "Customers", "Portfolio"][i]}

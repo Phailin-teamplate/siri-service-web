@@ -78,19 +78,14 @@ const services = [
 export default function Service() {
   return (
 <section id="service" className="scroll-mt-10">
-      <div className="w-full bg-white px-4 sm:px-6 lg:px-12 xl:px-20 2xl:px-32 py-5 sm:py-5 lg:py-15">
-         {/* Section Title */}
-      <motion.div
-        className="text-center mb-10"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#D3B156]">
-          Our Services
-        </h2>
-      </motion.div>
+      <div className="w-full bg-white px-4 sm:px-6 lg:px-12 xl:px-20 2xl:px-32 py-16 sm:py-20 lg:py-15">
+        {/* Section Title */}
+               <div className="text-center mb-10">
+
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#D3B156]">
+                   Our Services
+                </h2>
+              </div> 
    
 
         {/* Services List */}

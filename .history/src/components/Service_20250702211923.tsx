@@ -78,7 +78,7 @@ const services = [
 export default function Service() {
   return (
 <section id="service" className="scroll-mt-10">
-      <div className="w-full bg-white px-4 sm:px-6 lg:px-12 xl:px-20 2xl:px-32 py-5 sm:py-5 lg:py-15">
+      <div className="w-full bg-white px-4 sm:px-6 lg:px-12 xl:px-20 2xl:px-32 py-16 sm:py-20 lg:py-15">
          {/* Section Title */}
       <motion.div
         className="text-center mb-10"

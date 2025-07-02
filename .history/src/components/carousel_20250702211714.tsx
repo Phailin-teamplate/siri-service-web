@@ -10,7 +10,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ForumImage from "@/public/About.png";
 import AnotherImage from "@/public/service/service1.png";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const items = [
   {
@@ -34,29 +34,17 @@ export default function PortfolioCarousel() {
 
   return (
     <div
-      className="w-full max-w-screen-xl mx-auto px-4 md:px-8 py-10 sm:py-10 lg:py-15 scroll-mt-24"
+      className="w-full max-w-screen-xl mx-auto px-4 md:px-8 py-20 scroll-mt-24"
       id="portfolio"
     >
-      {/* Section Title */}
-      <motion.div
-        className="text-center mb-10"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
+          {/* Section Title */}
+      <div className="text-center mb-10">
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#D3B156]">
           Our Portfolio
         </h2>
-      </motion.div>
+      </div>
       {/* Carousel */}
-      <motion.div
-        className="relative w-full px-4 sm:px-4 md:px-0"
-        initial={{ opacity: 0, y: 60 }} // 👈 slide from bottom
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.4 }}
-      >
+      <div className="relative w-full px-4 sm:px-4 md:px-0">
         <Carousel>
           <CarouselContent>
             {items.map((item, index) => (
@@ -67,32 +55,33 @@ export default function PortfolioCarousel() {
                 }`}
               >
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-14">
-                  {/* Image */}
-                  <div className="w-full md:w-1/2">
-                    <div className="w-full h-[200px] sm:h-[250px] md:h-[320px] lg:h-[380px] xl:h-[400px] overflow-hidden ">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        width={550}
-                        height={400}
-                        className="w-full object-cover"
-                      />
-                    </div>
-                  </div>
+  {/* Image */}
+  <div className="w-full md:w-1/2">
+    <div className="w-full h-[200px] sm:h-[250px] md:h-[320px] lg:h-[380px] xl:h-[400px] overflow-hidden rounded-lg shadow-md">
+      <Image
+        src={item.image}
+        alt={item.title}
+        width={550}
+        height={400}
+        className="w-full object-cover"
+      />
+    </div>
+  </div>
 
-                  {/* Text */}
-                  <div className="w-full md:w-1/2 text-center md:text-left">
-                    <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-gray-900 mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm sm:text-base md:text-xl font-semibold text-gray-700 mb-4">
-                      {item.subtitle}
-                    </p>
-                    <p className="text-sm sm:text-base md:text-lg text-gray-800 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
+  {/* Text */}
+  <div className="w-full md:w-1/2 text-center md:text-left">
+    <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-gray-900 mb-2">
+      {item.title}
+    </h3>
+    <p className="text-sm sm:text-base md:text-xl font-semibold text-gray-700 mb-4">
+      {item.subtitle}
+    </p>
+    <p className="text-sm sm:text-base md:text-lg text-gray-800 leading-relaxed">
+      {item.description}
+    </p>
+  </div>
+</div>
+
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -115,7 +104,9 @@ export default function PortfolioCarousel() {
         </button>
 
         <button
-          onClick={() => setActiveIndex((prev) => (prev + 1) % items.length)}
+          onClick={() =>
+            setActiveIndex((prev) => (prev + 1) % items.length)
+          }
           aria-label="Next Slide"
           className="absolute right-2 md:right-[-48px] top-1/2 -translate-y-1/2 z-10 
                      bg-white border border-gray-300 hover:border-yellow-500 
@@ -139,7 +130,7 @@ export default function PortfolioCarousel() {
             />
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

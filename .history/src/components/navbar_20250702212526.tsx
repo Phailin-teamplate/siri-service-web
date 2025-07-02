@@ -3,7 +3,7 @@
 import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import Logo from "@/public/logo/Siri-Service.png";
+import Logo from "@/public/logo/Siri Service.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,8 +80,8 @@ export default function Navbar() {
               onClick={() => handleSmoothScroll(id)}
               className={`relative text-base font-bold px-3 py-2 rounded-lg transition-all duration-300 ${
                 activeSection === id
-                  ? "bg-[#D3B156] text-white shadow-md"
-                  : "text-gray-800 hover:bg-yellow-100 hover:[#D3B156]"
+                  ? "bg-blue-600 text-white shadow-md"
+                  : "text-gray-800 hover:bg-blue-100 hover:text-blue-600"
               }`}
             >
               {["About", "Services", "Customers", "Portfolio"][i]}
@@ -132,8 +132,8 @@ export default function Navbar() {
               onClick={() => handleSmoothScroll(id)}
               className={`text-left text-lg font-bold px-3 py-2 rounded-md transition-all duration-300 ${
                 activeSection === id
-                  ? "bg-[#D3B156] text-white shadow-md"
-                  : "text-gray-800 hover:bg-yellow-100 hover:text-[#D3B156]"
+                  ? "bg-blue-600 text-white shadow-md"
+                  : "text-gray-800 hover:bg-blue-100 hover:text-blue-600"
               }`}
             >
               {["About", "Services", "Customers", "Portfolio"][i]}

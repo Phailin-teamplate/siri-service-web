@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { motion } from "framer-motion";
 
 export const metadata: Metadata = {
-  title: "SIRI SERVICE",
+  title: "Teamplate",
   description: "We are a Laos-based IT startup aiming for the global market.",
 };
 
