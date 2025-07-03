@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -10,86 +10,34 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ForumImage from "@/public/About.png";
 import AnotherImage from "@/public/service/service1.png";
-import Service2 from "@/public/service/service2.png";
-import Service3 from "@/public/service/service3.png";
-import Service4 from "@/public/service/service4.png";
-import Service5 from "@/public/service/service5.png";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const items = [
   {
-    image: AnotherImage,
+    image: ForumImage,
     title: "2025 Lao Digital Forum",
     subtitle: "Event Organization & Interpretation",
     description:
       "As the event organizer, we successfully hosted the 2025 Lao Digital Forum, overseeing the entire event operation. We also provided Korean–Lao interpretation services, ensuring smooth and effective communication throughout the forum.",
   },
   {
-    image: Service2,
+    image: AnotherImage,
     title: "IT Training for Public Sector",
     subtitle: "Technical Workshop & Translation",
     description:
       "We organized IT capacity-building workshops for public institutions, including on-site translation and documentation in Lao and English. We ensured smooth knowledge transfer for all participants.",
   },
-  {
-    image: Service3,
-    title: "Mobile App for Agriculture Data",
-    subtitle: "UX/UI Design & Cross-platform Development",
-    description:
-      "We developed a user-friendly mobile application that allows farmers to record, track, and share agricultural data in real time. The app supports multiple languages and works seamlessly across iOS and Android devices.",
-  },
-  {
-    image: Service4,
-    title: "Smart City Dashboard",
-    subtitle: "Data Integration & Visualization",
-    description:
-      "We built a real-time dashboard for municipal governments to monitor traffic, air quality, and energy usage. The platform helps decision-makers make data-driven choices for city planning and resource optimization.",
-  },
-  {
-    image: Service5,
-    title: "Multilingual e-Learning Platform",
-    subtitle: "Content Localization & LMS Setup",
-    description:
-      "We deployed a customized learning management system with multilingual support and localized content for education institutions. The platform enables remote learning with integrated video, quiz, and progress tracking features.",
-  },
 ];
 
 export default function PortfolioCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null); // 👈 ใช้เก็บตัว interval
-  const [direction, setDirection] = useState<"left" | "right">("right");
+useEffect(() => {
+  const interval = setInterval(() => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % items.length)
+  }, 5000) // เปลี่ยนทุก 5 วินาที
 
-  const startAutoSlide = () => {
-    stopAutoSlide(); // เคลียร์ก่อนตั้งใหม่
-    intervalRef.current = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % items.length);
-    }, 3000); // ทุก 5 วินาที
-  };
-
-  const stopAutoSlide = () => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-  };
-
-  useEffect(() => {
-    startAutoSlide(); // เริ่ม Auto Slide เมื่อโหลดหน้า
-    return () => stopAutoSlide(); // เคลียร์เมื่อ component หาย
-  }, []);
-
-  // เมื่อ user กดปุ่ม, reset timer
-  const goToPrev = () => {
-    setDirection("left"); // 👉 Slide from left to right
-
-    setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
-    startAutoSlide(); // reset timer
-  };
-
-  const goToNext = () => {
-    setDirection("right"); // 👉 Slide from right to left
-
-    setActiveIndex((prev) => (prev + 1) % items.length);
-    startAutoSlide(); // reset timer
-  };
-
+  return () => clearInterval(interval) // ล้างเมื่อ component ถูก unmount
+}, [items.length])
   return (
     <div
       className="w-full max-w-screen-xl mx-auto px-4 md:px-8 py-10 sm:py-10 lg:py-15 md:scroll-mt-15 scroll-mt-10"
@@ -127,20 +75,14 @@ export default function PortfolioCarousel() {
                 {index === activeIndex && (
                   <motion.div
                     className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-14"
-                    initial={{
-                      opacity: 0,
-                      x: direction === "right" ? 100 : -100, // 👈 ขึ้นกับทิศ
-                    }}
+                    initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
-                    exit={{
-                      opacity: 0,
-                      x: direction === "right" ? -100 : 100, // 👈 slide ออกอีกฝั่ง
-                    }}
+                    exit={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                   >
                     {/* Image */}
                     <div className="w-full md:w-1/2">
-                      <div className="w-full h-[200px] sm:h-[250px] md:h-[320px] lg:h-[380px] xl:h-[400px] overflow-hidden ">
+                      <div className="w-full h-[200px] sm:h-[250px] md:h-[320px] lg:h-[380px] xl:h-[400px] overflow-hidden rounded-lg shadow-md">
                         <Image
                           src={item.image}
                           alt={item.title}
@@ -172,27 +114,29 @@ export default function PortfolioCarousel() {
 
         {/* Navigation Buttons */}
         <button
-          onClick={goToPrev}
+          onClick={() =>
+            setActiveIndex((prev) => (prev - 1 + items.length) % items.length)
+          }
           aria-label="Previous Slide"
           className="absolute left-2 md:left-[-80px] top-1/2 -translate-y-1/2 z-10 
                      bg-white border border-gray-300 hover:border-yellow-500 
                      text-gray-600 hover:text-yellow-600 
                      rounded-full w-8 h-8 md:w-10 md:h-10 shadow-md 
                      flex items-center justify-center 
-                     transition-all duration-20 cursor-pointer"
+                     transition-all duration-200"
         >
           <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
         </button>
 
         <button
-          onClick={goToNext}
+          onClick={() => setActiveIndex((prev) => (prev + 1) % items.length)}
           aria-label="Next Slide"
           className="absolute right-2 md:right-[-80px] top-1/2 -translate-y-1/2 z-10 
                      bg-white border border-gray-300 hover:border-yellow-500 
                      text-gray-600 hover:text-yellow-600 
                      rounded-full w-8 h-8 md:w-10 md:h-10 shadow-md 
                      flex items-center justify-center 
-                     transition-all duration-200 cursor-pointer"
+                     transition-all duration-200"
         >
           <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
         </button>

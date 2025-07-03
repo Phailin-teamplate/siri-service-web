@@ -24,7 +24,7 @@ export default function Customer() {
   return (
     <section
       id="customer"
-      className="w-full bg-white px-4 sm:px-6 lg:px-12 xl:px-20 2xl:px-32 py-5 sm:py-5 lg:py-15 md:scroll-mt-20 scroll-mt-15"
+      className="w-full bg-white px-4 sm:px-6 lg:px-12 xl:px-20 2xl:px-32 py-5 sm:py-5 lg:py-15 md:scroll-mt-2o scroll-mt-15"
     >
        {/* Section Title */}
       <motion.div

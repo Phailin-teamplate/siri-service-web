@@ -54,10 +54,11 @@ const items = [
   },
 ];
 
+
 export default function PortfolioCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null); // 👈 ใช้เก็บตัว interval
-  const [direction, setDirection] = useState<"left" | "right">("right");
+const [direction, setDirection] = useState<"left" | "right">("right");
 
   const startAutoSlide = () => {
     stopAutoSlide(); // เคลียร์ก่อนตั้งใหม่
@@ -77,14 +78,14 @@ export default function PortfolioCarousel() {
 
   // เมื่อ user กดปุ่ม, reset timer
   const goToPrev = () => {
-    setDirection("left"); // 👉 Slide from left to right
+      setDirection("left"); // 👉 Slide from left to right
 
     setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
     startAutoSlide(); // reset timer
   };
 
   const goToNext = () => {
-    setDirection("right"); // 👉 Slide from right to left
+      setDirection("right"); // 👉 Slide from right to left
 
     setActiveIndex((prev) => (prev + 1) % items.length);
     startAutoSlide(); // reset timer
@@ -127,15 +128,15 @@ export default function PortfolioCarousel() {
                 {index === activeIndex && (
                   <motion.div
                     className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-14"
-                    initial={{
-                      opacity: 0,
-                      x: direction === "right" ? 100 : -100, // 👈 ขึ้นกับทิศ
-                    }}
+                     initial={{
+          opacity: 0,
+          x: direction === "right" ? 100 : -100, // 👈 ขึ้นกับทิศ
+        }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{
-                      opacity: 0,
-                      x: direction === "right" ? -100 : 100, // 👈 slide ออกอีกฝั่ง
-                    }}
+          opacity: 0,
+          x: direction === "right" ? -100 : 100, // 👈 slide ออกอีกฝั่ง
+        }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                   >
                     {/* Image */}
