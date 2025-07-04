@@ -1,0 +1,109 @@
+{
+  "Homepage": {
+    "subtitle": "Total Business Support Service in Laos",
+    "title": "SIRI SERVICE"
+  },
+
+  "About": {
+    "title": "About Us",
+    "subtitle": "Siri Service is a versatile company based in Laos, offering a wide range of services including event planning and management, interpretation and translation, visual design and publishing, as well as printing. We specialize in supporting foreign companies conducting various activities in Laos by providing localized, professional assistance across these areas."
+  },
+  "servicesSectionTitle": "Our Services",
+  "services": [
+    {
+      "title": "Event Planning & Management",
+      "text": [
+        "We provide end-to-end planning and",
+        "on-site management for government,",
+        "corporate, and institutional events",
+        "including forums, exhibitions, and",
+        "conferences."
+      ]
+    },
+    {
+      "title": "Interpretation & Translation (Korean–Lao / English–Lao)",
+      "text": [
+        "Professional interpretation and document",
+        "translation services for meetings,",
+        "conferences, and official engagements,",
+        "delivered by experienced Lao interpreters",
+        "and translators."
+      ]
+    },
+    {
+      "title": "Reservation & Administrative Support",
+      "text": [
+        "We offer one-stop assistance for hotel,",
+        "vehicle, and flight bookings, as well as",
+        "support for visa applications, driver’s",
+        "licenses, vehicle registration, and",
+        "insurance for foreign visitors."
+      ]
+    },
+    {
+      "title": "Visual Design Services",
+      "text": [
+        "Customized visual content for events,",
+        "including banners, posters, and",
+        "infographics — from concept design to",
+        "final delivery."
+      ]
+    },
+    {
+      "title": "Publishing & Printing Services",
+      "text": [
+        "Editing, designing, and printing of",
+        "materials such as forum booklets, leaflets,",
+        "and publications — complete support",
+        "from layout to binding."
+      ]
+    }
+  ],
+  "Customer":{
+    "title": "Our Customers"
+  },
+      "portfolioSectionTitle": "Our Portfolio",
+      "portfolios": [
+    {
+      "title": "2025 Lao Digital Forum",
+      "subtitle": "Event Organization & Interpretation",
+      "text": 
+        "As the event organizer, we successfully hosted the 2025 Lao Digital Forum, overseeing the entire event operation. We also provided Korean–Lao interpretation services, ensuring smooth and effective communication throughout the forum."
+      
+    },
+    {
+      "title": "IT Training for Public Sector",
+      "subtitle": "Event Organization & InterpretationTechnical Workshop & Translation",
+      "text": 
+        "We organized IT capacity-building workshops for public institutions, including on-site translation and documentation in Lao and English. We ensured smooth knowledge transfer for all participants."
+      
+    },
+    {
+      "title": "Mobile App for Agriculture Data",
+      "subtitle": "UX/UI Design & Cross-platform Development",
+      "text": 
+        "We developed a user-friendly mobile application that allows farmers to record, track, and share agricultural data in real time. The app supports multiple languages and works seamlessly across iOS and Android devices."
+      
+    },
+    {
+      "title": "Smart City Dashboard",
+      "subtitle": "Data Integration & Visualization",
+      "text": 
+        "We built a real-time dashboard for municipal governments to monitor traffic, air quality, and energy usage. The platform helps decision-makers make data-driven choices for city planning and resource optimization."
+      
+    },
+    {
+      "title": "Multilingual e-Learning Platform",
+      "subtitle": "Content Localization & LMS Setup",
+      "text": 
+        "We deployed a customized learning management system with multilingual support and localized content for education institutions. The platform enables remote learning with integrated video, quiz, and progress tracking features."
+      
+    }
+  ],
+  "Footer":{
+    "title": "SIRI SERVICE",
+    "text": "2025 All Rights Reserved.",
+    "Address": "Xiangda Village, Xaysettha District, Vientiane Capital"
+  }
+
+}

@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "stacks": "Stacks",
+    "packages": "Packages",
+    "activity": "Activity",
+    "contact": "Contact"
+  },
+  "features": {
+    "titleSmall": "SOLID FEATURES",
+    "titleMain": "What kind of business do we do?",
+    "description": "We operate a highly diverse and extensive range of businesses in the IT sector.",
+    "ctaTitle": "Ready to get started?",
+    "ctaDescription": "Join us today and discover how our platform can transform your experience.",
+    "ctaButton": "Learn More"
+  }
+}

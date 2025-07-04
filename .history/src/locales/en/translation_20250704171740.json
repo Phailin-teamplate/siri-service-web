@@ -1,0 +1,63 @@
+{
+ 
+  "Homepage": {
+   "subtitle": "Total Business Support Service in Laos",
+      "title": "SIRI SERVICE"
+  },
+
+    "About":{
+      "title": "About Us",
+      "subtitle": "Siri Service is a versatile company based in Laos, offering a wide range of services including event planning and management, interpretation and translation, visual design and publishing, as well as printing. We specialize in supporting foreign companies conducting various activities in Laos by providing localized, professional assistance across these areas."
+    },
+    "servicesSectionTitle": "Our Services",
+  "services": [
+    {
+      "title": "Event Planning & Management",
+      "text": [
+        "We provide end-to-end planning and",
+        "on-site management for government,",
+        "corporate, and institutional events",
+        "including forums, exhibitions, and",
+        "conferences."
+      ]
+    },
+    {
+      "title": "Interpretation & Translation (Korean–Lao / English–Lao)",
+      "text": [
+        "Professional interpretation and document",
+        "translation services for meetings,",
+        "conferences, and official engagements,",
+        "delivered by experienced Lao interpreters",
+        "and translators."
+      ]
+    },
+    {
+      "title": "Reservation & Administrative Support",
+      "text": [
+        "We offer one-stop assistance for hotel,",
+        "vehicle, and flight bookings, as well as",
+        "support for visa applications, driver’s",
+        "licenses, vehicle registration, and",
+        "insurance for foreign visitors."
+      ]
+    },
+    {
+      "title": "Visual Design Services",
+      "text": [
+        "Customized visual content for events,",
+        "including banners, posters, and",
+        "infographics — from concept design to",
+        "final delivery."
+      ]
+    },
+    {
+      "title": "Publishing & Printing Services",
+      "text": [
+        "Editing, designing, and printing of",
+        "materials such as forum booklets, leaflets,",
+        "and publications — complete support",
+        "from layout to binding."
+      ]
+    }
+  ]
+}

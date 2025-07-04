@@ -1,10 +1,10 @@
 import React from "react";
-import Homepage from "@/src/components/Homepage";
-import About from "@/src/components/About";
-import Service from "@/src/components/Service";
-import Customer from "@/src/components/Customer";
-import PortfolioCarousel from "@/src/components/carousel";
-import ClientLayout from "../components/ClientLayout";
+import Homepage from "@/src/app/[lang]/components/Homepage";
+import About from "@/src/app/[lang]/components/About";
+import Service from "@/src/app/[lang]/components/Service";
+import Customer from "@/src/app/[lang]/components/Customer";
+import PortfolioCarousel from "@/src/app/[lang]/components/carousel";
+import ClientLayout from "./components/ClientLayout";
 
 export const metadata = {
   title: "Homepage | SIRI SERVICE",
@@ -34,10 +34,10 @@ export default function Home() {
   return (
     <section className="w-full" id="home">
       <ClientLayout>
-        <Homepage />
-        <About />
-        <Service />
-        <Customer />
+        {/* <Homepage />
+        <About /> */}
+        {/* <Service /> */}
+        {/* <Customer /> */}
         <PortfolioCarousel />
       </ClientLayout>
     </section>

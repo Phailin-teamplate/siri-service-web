@@ -21,14 +21,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-:lang(en) {
-  font-family: var(--font-inter), sans-serif;
-}
-
-:lang(lo) {
-  font-family: var(--font-lao), sans-serif;
-}
-
-:lang(ko) {
-  font-family: var(--font-kr), sans-serif;
-}

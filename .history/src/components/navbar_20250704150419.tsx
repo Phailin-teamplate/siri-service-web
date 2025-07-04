@@ -1,14 +1,64 @@
 "use client";
 
+import * as React from "react";
 import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import Logo from "@/public/logo/Siri-Service.png";
+import FlagEN from "@/public/flags/Flag-en.svg";
+import FlagLO from "@/public/flags/Flag-lo.svg";
+import FlagKO from "@/public/flags/Flag-ko.png";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+import { usePathname, useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
+const labels: Record<string, string[]> = {
+  en: ["About", "Services", "Customers", "Portfolio"],
+  lo: ["ກ່ຽວກັບ", "ບໍລິການ", "ລູກຄ້າ", "ຜົນງານທີ່ຜ່ານມາ"],
+  ko: ["회사소개", "서비스", "고객", "포트폴리오"],
+};
+const navLinks = [
+  { href: "", id: "home" },
+  { href: "#about", id: "about" },
+  { href: "#services", id: "services" },
+  { href: "#customers", id: "customers" },
+  { href: "#portfolio", id: "portfolio" },
+];
+
+const languages = [
+  { code: "en", label: "English", flag: FlagEN },
+  { code: "lo", label: "Lao", flag: FlagLO },
+  { code: "ko", label: "Korean", flag: FlagKO },
+];
 export default function Navbar() {
+    const pathname = usePathname();
+  const router = useRouter();
+  
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMounted, setIsMounted] = React.useState(false);
+  const [currentLang, setCurrentLang] = React.useState("en");
+
+  React.useEffect(() => {
+    const lang = pathname?.split("/")[1] || "en";
+    setCurrentLang(lang);
+    setIsMounted(true);
+  }, [pathname]);
+  const currentLangData =
+    languages.find((l) => l.code === currentLang) || languages[0];
+    const changeLanguage = (lang: string) => {
+    const segments = pathname.split("/");
+    segments[1] = lang;
+    const newPath = segments.join("/") || `/${lang}`;
+    localStorage.setItem("lang", lang);
+    router.push(newPath);
+  };
 
   // ✅ Manual section detection using scrollY
   useEffect(() => {
@@ -87,6 +137,24 @@ export default function Navbar() {
               {["About", "Services", "Customers", "Portfolio"][i]}
             </button>
           ))}
+           {isMounted && (
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="outline" className="px-2 py-1 flex items-center gap-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm hover:ring-2 ring-primary transition duration-200 bg-white/80 dark:bg-zinc-800/70">
+                      <Image src={currentLangData.flag} alt={currentLangData.label} width={24} height={16} />
+                      {/* <span className="text-sm">{currentLangData.label}</span> */}
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-36 p-1 rounded-md border bg-white dark:bg-zinc-900 shadow-lg" align="end">
+                    {languages.map((lang) => (
+                      <DropdownMenuItem key={lang.code} onClick={() => changeLanguage(lang.code)} className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer transition">
+                        <Image src={lang.flag} alt={lang.label} width={24} height={16} />
+                        <span className="text-sm text-gray-700 dark:text-gray-200">{lang.label}</span>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              )}
         </div>
 
         {/* Mobile Menu Button */}

@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "홈",
+    "about": "회사소개",
+    "stacks": "기술 스택",
+    "packages": "패키지",
+    "activity": "활동",
+    "contact": "연락처"
+  },
+   "features": {
+    "titleSmall": "강력한 기능",
+    "titleMain": "우리는 어떤 비즈니스를 하나요?",
+    "description": "우리는 IT 분야에서 매우 다양한 영역의 사업을 운영하고 있습니다.",
+    "ctaTitle": "시작할 준비가 되셨나요?",
+    "ctaDescription": "오늘 가입하고 우리의 플랫폼이 당신의 경험을 어떻게 바꿀 수 있는지 알아보세요.",
+    "ctaButton": "자세히 보기"
+  }
+}
